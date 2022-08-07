@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h1>Get FizzBuzz Result!</h1>
+    <p>Type a number: </p>
+    <input type="text" id="number">
+    <button onclick="changeFizzBuzz()">Click Here!</button>
+    <hr>
+    <div id="result"></div>
+    <script>
+        document.querySelector("button").onclick = function changeFizzBuzz() {
+            let number = document.getElementById("number").value
+                if (number % 3 === 0 && number % 5 === 0 ) {
+                    const divResult = document.getElementById("result");
+                    const paragraf = document.createElement("p")
+                    paragraf.innerHTML = "FizzBuzz!"
+                    divResult.append(paragraf);
+                    // document.getElementById("result").innerHTML = "FizzBuzz!"
+                    console.log("FizzBuzz");
+                } else if (number % 5=== 0) {
+                    const divResult = document.getElementById("result");
+                    const paragraf = document.createElement("p")
+                    paragraf.innerHTML = "Buzz!"
+                    divResult.append(paragraf);
+                    console.log("Buzz");
+                } else if (number % 3 === 0) {
+                    const divResult = document.getElementById("result");
+                    const paragraf = document.createElement("p")
+                    paragraf.innerHTML = "Fizz!"
+                    divResult.append(paragraf);
+                    console.log("Fizz");
+                } else {
+                    console.log(number)
+                }
+        }
+    </script>
+</body>
+</html>
