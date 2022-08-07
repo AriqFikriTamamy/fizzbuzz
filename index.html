@@ -16,7 +16,13 @@
     <script>
         document.querySelector("button").onclick = function changeFizzBuzz() {
             let number = document.getElementById("number").value
-                if (number % 3 === 0 && number % 5 === 0 ) {
+                if(number === 0 || number === ""){
+                    const divResult = document.getElementById("result");
+                    const paragraf = document.createElement("p")
+                    paragraf.innerHTML = "invalid input"
+                    divResult.append(paragraf);
+                    console.log("invalid input")
+                }else if (number % 3 === 0 && number % 5 === 0 ) {
                     const divResult = document.getElementById("result");
                     const paragraf = document.createElement("p")
                     paragraf.innerHTML = "FizzBuzz!"
