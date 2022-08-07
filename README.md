@@ -1,1 +1,2 @@
 # fizzbuzz
+Tugas FizzBuzz Progate
